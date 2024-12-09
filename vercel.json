@@ -7,10 +7,10 @@
         
       }
     ],
-    "routes": [
+    "rewrites": [
 
-        { "src": "/(.*)", 
-          "destination": "/" 
+        { "source": "/api/movies/(.*)", 
+          "destination": "/index.js" 
         }
     ]
   }
