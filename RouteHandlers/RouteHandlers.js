@@ -19,9 +19,8 @@ exports.getAllDocs = async(req,res)=>{
 }
 
 exports.getDocById = async(req,res)=>{
-    const id = Number(req.params.id)
     try{
-        const Movies = await MovieModel.findById(id)
+        const Movies = await MovieModel.findById(req.params.id)
         res.status(200).json({
             status :"success",
             data : {
