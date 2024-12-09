@@ -8,6 +8,7 @@ mongoose.connect(process.env.CONN_STR , {
     socketTimeoutMS: 60000,  
 })
 .then((db)=>{
+    console.log(db)
     console.log("connection succesful")
 })
 .catch((err)=>{
