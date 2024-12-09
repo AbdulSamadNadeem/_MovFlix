@@ -5,7 +5,7 @@ exports.getAllDocs = async(req,res)=>{
         const Movies = await MovieModel.find()
         res.status(200).json({
             status :"success",
-            length:data.length,
+            length:Movies.length,
             data : {
                 Movies,
             }
@@ -25,7 +25,7 @@ exports.getDocById = async(req,res)=>{
         res.status(200).json({
             status :"success",
             data : {
-                Movies,
+                Movies:Movies
             }
         })
     }catch(err){
@@ -42,7 +42,7 @@ exports.CreateDoc = async(req,res)=>{
         res.status(201).json({
             status :"success",
             data : {
-                Movies,
+                Movies:Movies
             }
         })
       }catch(err){
@@ -59,7 +59,7 @@ exports.UpdateDoc =async(req,res)=>{
         res.status(200).json({
             status :"success",
             data : {
-                Movies,
+                Movies:Movies
             }
         })
     }catch(err){
